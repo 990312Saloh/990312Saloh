@@ -2,56 +2,56 @@
 #include <string>
 using namespace std;
 
-class HayvonSifat {
+class Market {
 private:
-    string tur;
-    string rang;
+    string mahsulaot;
+    string sifat;
     float ogirligi;
-    int yoshi;
+    int muddat;
 
 public:
     void show() {
         static int k = 0;
-        cout << ++k << " - Hayvon sifati:" << endl << endl;
-        cout << "Turi: " << tur << endl;
-        cout << "Rangi: " << rang << endl;
-        cout << "Og'irligi: " << ogirligi << " kg" << endl;
-        cout << "Yoshi: " << yoshi << " yosh" << endl << endl;
+        cout << ++k << " - Market bolimlari:" << endl << endl;
+        cout << "fresh: "  << endl;
+        cout << "tez : " << mudatli mahsulot << endl;
+        cout << "sut: " << mahsulot << " kg" << endl;
+        cout << ": " << muddati <<" << endl << endl;
     }
 
     void input() {
         static int k = 0;
-        cout << ++k << " - Hayvon sifatini kiriting:" << endl << endl;
-        cout << "Turi: "; cin >> tur;
-        cout << "Rangi: "; cin >> rang;
-        cout << "Og'irligi: "; cin >> ogirligi;
-        cout << "Yoshi: "; cin >> yoshi;
+        cout << ++k << " - muddatuni kiriting:" << endl << endl;
+        cout << "mahsulot: "; cin >> tur;
+        cout << "sut: "; cin >> rang;
+        cout << " 1 haftagacha: "; cin >> ogirligi;
+        cout << "muddati: "; cin >> muddati;
         cout << endl;
     }
 
     void qidir() {
         int k;
-        cout << "Izlash turini kiriting: " << endl;
+        cout << "mahsulot turini kiriting: " << endl;
         cout << "Turi: 1" << endl;
         cout << "Rangi: 2" << endl;
         cout << "Og'irligi: 3" << endl;
-        cout << "Yoshi: 4" << endl;
+        cout << "muddati: 4" << endl;
         cin >> k;
 
         if(k==1) {
             string s;
-            cout << "Qidirilayotgan tur: "; cin >> s;
+            cout << "Qidirilayotgan mahsulot: "; cin >> s;
             if(tur.compare(s) == 0) {
-                cout << "Bunday turdagi hayvon mavjud:" << endl;
+                cout << "Bunday turdagi mahsulot mavjud:" << endl;
                 show();
             }
         }
 
         if(k==2) {
             string s;
-            cout << "Qidirilayotgan rang: "; cin >> s;
+            cout << "Qidirilayotgan mahsulot: "; cin >> s;
             if(rang.compare(s) == 0) {
-                cout << "Bunday rangdagi hayvon mavjud:" << endl;
+                cout << "Bunday mahsulot marketta  mavjud:" << endl;
                 show();
             }
         }
@@ -60,16 +60,16 @@ public:
             float s;
             cout << "Qidirilayotgan og'irligi: "; cin >> s;
             if(ogirligi == s) {
-                cout << "Bunday og'irligidagi hayvon mavjud:" << endl;
+                cout << "Bunday og'irligidagi mahsulot mavjud:" << endl;
                 show();
             }
         }
 
         if(k==4) {
             int s;
-            cout << "Qidirilayotgan yoshi: "; cin >> s;
+            cout << "Qidirilayotgan muddati: "; cin >> s;
             if(yoshi == s) {
-                cout << "Bunday yoshdagi hayvon mavjud:" << endl;
+                cout << "Bunday muddatdagi mahsulot mavjud:" << endl;
                 show();
             }
         }
@@ -77,9 +77,9 @@ public:
 };
 
 int main() {
-    HayvonSifat h[100];
+    mahsulot sifati h[100];
     int N;
-    cout << "Hayvonlar sonini kiriting: "; cin >> N;
+    cout << "mahsulot sonini kiriting: "; cin >> N;
     for(int i = 0; i < N; i++) {
         h[i].input();
     }
